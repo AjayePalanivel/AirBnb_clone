@@ -105,7 +105,7 @@ class _PropertyTileState extends State<PropertyTile> {
                   ),
                   const SizedBox(height: 4.0),
                   Text(
-                    'Wi-Fi Swimming Pool Fitness Center',
+                    'Wi-Fi, Swimming Pool, Fitness Center',
                     style: textTheme.bodyLarge!
                         .copyWith(fontWeight: FontWeight.bold),
                   ),

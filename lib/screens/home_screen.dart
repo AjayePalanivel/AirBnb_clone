@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    final textTheam = Theme.of(context).textTheme;
+    final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 130,
@@ -33,14 +33,10 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Stack(
             children: [
               const Positioned(
-                  bottom: 0, left: 0, right: 0, child: PropertyTypeList()),
-              Positioned(
-                top: 56,
-                right: 8,
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.tune, size: 30),
-                ),
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: PropertyTypeList(),
               ),
               Positioned(
                 left: 16,
@@ -79,12 +75,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Text(
                                 'Where to?',
-                                style: textTheam.bodyMedium!
+                                style: textTheme.bodyMedium!
                                     .copyWith(fontWeight: FontWeight.bold),
                               ),
                               Text(
                                 'Anywhere - Any week - Any guest',
-                                style: textTheam.bodyMedium,
+                                style: textTheme.bodyMedium,
                               ),
                             ],
                           ),
@@ -92,6 +88,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                ),
+              ),
+              Positioned(
+                top: 56,
+                right: 8,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.tune, size: 30),
                 ),
               ),
             ],
