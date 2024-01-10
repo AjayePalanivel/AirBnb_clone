@@ -7,6 +7,7 @@ import 'package:airbnb_clone/widgets/select_destination_widget.dart';
 import 'package:airbnb_clone/widgets/select_guest_widget.dart';
 import 'package:airbnb_clone/widgets/text_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 
 class BookingDetailScreen extends StatefulWidget {
@@ -78,7 +79,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
                     });
                   },
                   child: SelectDateWidget(step: step),
-                ),
+                ).animate().fadeIn(duration: const Duration(milliseconds: 350)),
                 GestureDetector(
                   onTap: () {
                     setState(() {
@@ -86,7 +87,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
                     });
                   },
                   child: SelectGuestWidget(step: step),
-                ),
+                ).animate().fadeIn(duration: const Duration(milliseconds: 500)),
               ],
             ),
           ),
