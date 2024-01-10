@@ -18,6 +18,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        textTheme: const TextTheme(
+          headlineSmall: TextStyle(color: appBlack),
+          titleMedium: TextStyle(color: appBlack),
+          labelMedium: TextStyle(color: appBlack),
+          bodySmall: TextStyle(color: appBlack),
+          bodyMedium: TextStyle(color: appBlack),
+          bodyLarge: TextStyle(color: appBlack),
+        ),
         segmentedButtonTheme: SegmentedButtonThemeData(
           style: ButtonStyle(
             shape: MaterialStateProperty.all(

@@ -4,6 +4,7 @@ import 'package:airbnb_clone/models/booking_step_model.dart';
 import 'package:airbnb_clone/utils/color_pallet.dart';
 import 'package:airbnb_clone/widgets/select_date_widget.dart';
 import 'package:airbnb_clone/widgets/select_destination_widget.dart';
+import 'package:airbnb_clone/widgets/select_guest_widget.dart';
 import 'package:airbnb_clone/widgets/text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -16,7 +17,7 @@ class BookingDetailScreen extends StatefulWidget {
 }
 
 class _BookingDetailScreenState extends State<BookingDetailScreen> {
-  var step = BookingStep.selectDate;
+  var step = BookingStep.nunOfEach;
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -77,6 +78,14 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
                     });
                   },
                   child: SelectDateWidget(step: step),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      step = BookingStep.selectGuests;
+                    });
+                  },
+                  child: SelectGuestWidget(step: step),
                 ),
               ],
             ),

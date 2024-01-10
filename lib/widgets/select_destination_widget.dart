@@ -81,7 +81,7 @@ class SelectDestinationWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'When',
+                    'Where',
                     style: textTheme.bodyMedium,
                   ),
                   Text(

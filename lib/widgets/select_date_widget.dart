@@ -11,7 +11,7 @@ class SelectDateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final size = MediaQuery.of(context).size;
-    // var expandedHeight = size.height - 112 - 60 - 32 - 16;
+    // var expandedHeight = size.height - 112 - 60 - 32 - 16 - 60;
     // 112 = appBar height + top safeArea height
     // 60 = destination selection height
     // 32 = top + bottom padding
@@ -21,25 +21,26 @@ class SelectDateWidget extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
-        height: step == BookingStep.selectDate ? /*expandedHeight*/ 600 : 60,
+        height: step == BookingStep.selectDate ? 576 : 60,
         width: double.infinity,
         padding: const EdgeInsets.all(16),
         child: step == BookingStep.selectDate
             ? Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'When\'s your trip?',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineSmall!
-                        .copyWith(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                   ),
                   const SizedBox(height: 16.0),
-                  const Row(
-                      children: [Expanded(child: SegmentedButtonWidget())]),
+                  const SizedBox(
+                    height: 48,
+                    child: Row(
+                        children: [Expanded(child: SegmentedButtonWidget())]),
+                  ),
                   const SizedBox(height: 16.0),
                   const SizedBox(height: 300, child: AppCalendar()),
+                  const Spacer(),
                   const Divider(color: appRed, thickness: 1),
                   SizedBox(
                     height: 48,
@@ -73,7 +74,7 @@ class SelectDateWidget extends StatelessWidget {
                     ),
                   ),
                   const Divider(color: appRed, thickness: 1),
-                  const SizedBox(height: 16.0),
+                  const SizedBox(height: 4),
                   SizedBox(
                     height: 48,
                     child: Row(
@@ -108,8 +109,8 @@ class SelectDateWidget extends StatelessWidget {
                   ),
                 ],
               )
-                .animate(delay: const Duration(milliseconds: 100))
-                .fadeIn(delay: const Duration(milliseconds: 100))
+                .animate(delay: const Duration(milliseconds: 0))
+                .fadeIn(delay: const Duration(milliseconds: 300))
             : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
