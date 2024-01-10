@@ -108,9 +108,7 @@ class SelectDateWidget extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
-                .animate(delay: const Duration(milliseconds: 0))
-                .fadeIn(delay: const Duration(milliseconds: 300))
+              ).animate().fadeIn(delay: const Duration(milliseconds: 300))
             : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

@@ -79,7 +79,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
                     });
                   },
                   child: SelectDateWidget(step: step),
-                ).animate().fadeIn(duration: const Duration(milliseconds: 350)),
+                ).animate().fadeIn(duration: const Duration(milliseconds: 300)),
                 GestureDetector(
                   onTap: () {
                     setState(() {
@@ -87,7 +87,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
                     });
                   },
                   child: SelectGuestWidget(step: step),
-                ).animate().fadeIn(duration: const Duration(milliseconds: 500)),
+                ).animate().fadeIn(duration: const Duration(milliseconds: 400)),
               ],
             ),
           ),
